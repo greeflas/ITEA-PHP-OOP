@@ -2,6 +2,8 @@
 
 class Person
 {
+    const PERSON_AGE = 18;
+
     public static $counter = 0;
 
     private $firstName = 'unnamed';
@@ -59,3 +61,5 @@ var_dump($person->getFirstName());
 var_dump($person->getLastName());
 
 $person2 = new Person('Nastya', 'Rezova');
+
+Person::PERSON_AGE;
