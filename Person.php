@@ -2,9 +2,9 @@
 
 class Person
 {
-    const PERSON_AGE = 18;
+    const OBJECTS_LIMIT = 3;
 
-    public static $counter = 0;
+    private static $counter = 0;
 
     private $firstName = 'unnamed';
     private $lastName;
@@ -15,6 +15,10 @@ class Person
         $this->lastName = $lastName;
 
         self::$counter++;
+
+        if (self::$counter === self::OBJECTS_LIMIT) {
+            throw new \Exception('Cannot create class object!');
+        }
     }
 
     public function __destruct()
@@ -61,3 +65,5 @@ var_dump($person->getFirstName());
 var_dump($person->getLastName());
 
 $person2 = new Person('Nastya', 'Rezova');
+$person3 = new Person('', '');
+$person4 = new Person('', '');
