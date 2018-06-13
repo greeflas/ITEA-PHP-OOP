@@ -53,6 +53,11 @@ class Person
     {
         $this->lastName = $lastName;
     }
+
+    public function __toString()
+    {
+        return 'Full name: ' . $this->firstName . ' ' . $this->lastName . PHP_EOL;
+    }
 }
 
 $person = new Person('Vasya', 'Petrov');
@@ -65,5 +70,5 @@ var_dump($person->getFirstName());
 var_dump($person->getLastName());
 
 $person2 = new Person('Nastya', 'Rezova');
-$person3 = new Person('', '');
-$person4 = new Person('', '');
+
+echo $person;
