@@ -61,5 +61,3 @@ var_dump($person->getFirstName());
 var_dump($person->getLastName());
 
 $person2 = new Person('Nastya', 'Rezova');
-
-Person::PERSON_AGE;
