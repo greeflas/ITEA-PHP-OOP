@@ -19,14 +19,14 @@ class InMemoryDataStorage extends AbstractDataStorage implements ClearStorageInt
         }
     }
 
-    public function get($key)
-    {
-        if (isset($this->storage[$key])) {
-            return $this->storage[$key];
-        }
-
-        return null;
-    }
+//    public function get($key)
+//    {
+//        if (isset($this->storage[$key])) {
+//            return $this->storage[$key];
+//        }
+//
+//        return null;
+//    }
 
     public function clear()
     {

@@ -1,6 +1,7 @@
 <?php
 
 require __DIR__ . '/DataStorageInterface.php';
+require __DIR__ . '/NotImplementedException.php';
 
 abstract class AbstractDataStorage implements DataStorageInterface
 {
@@ -10,6 +11,6 @@ abstract class AbstractDataStorage implements DataStorageInterface
 
     public function get($key)
     {
-        return $key;
+        throw new NotImplementedException();
     }
 }
